@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Exo&family=Fjord+One&family=Inter:wght@500&family=PT+Mono&family=Press+Start+2P&family=Roboto+Mono&family=Roboto:wght@100;300;400;500;700&family=Ropa+Sans&display=swap');
+.container{
+    border-style: solid;
+font-family: 'Inter', sans-serif;
+/* font-family: 'Press Start 2P', cursive; */
+/* font-family: 'PT Mono', monospace; */
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Roboto Mono', monospace; */
+/* font-family: 'Ropa Sans', sans-serif; */
+max-width:900px;
+/* position:absolute; */
+margin: 0 auto;
+padding-top: 2rem;
+} 

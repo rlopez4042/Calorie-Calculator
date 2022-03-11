@@ -33,8 +33,10 @@
       placeholder=" Goal Weight lbs."
     />
     lbs
-    <div [hidden]="isShow" (ngSubmit)="onSubmit()">
+    <div class="results" [hidden]="isShow" (ngSubmit)="onSubmit()">
       <p>{{paragraph}}</p>
+      <p>{{bmiSummary}}</p>
+      <p>{{suggest}}</p>
     </div>
   </div>
   <input type="submit" value="Calculate" class="btn btn-block" />

@@ -24,6 +24,8 @@ export class CalculateFormComponent implements OnInit {
   calroieAdjLength!: number;
 
   paragraph!: string;
+  bmiSummary!: string;
+  suggest!: string;
 
   constructor() { }
 
@@ -57,15 +59,44 @@ export class CalculateFormComponent implements OnInit {
     //Calculate the adjuested calories to lose one pound of body fat per week
     const calroieAdjLength = ((this.weight - this.goalWeight) * 3500) / 500 / 7
 
-    this.paragraph = (
-      "The calculated BMR for an individual with the given values is approximately " + (BMRF + 500).toFixed(2) +
-      " calories for the average female and " + (BMRM + 500).toFixed(2) + 
-      " calories for the average male. If you continue to eat this amount of calories a day, you can maintain this weight. If you wanted to lose 1 pount a week you would need to adjust your daily caloric intake to " +
-      (BMRF).toFixed(2) + " calories for females and " + (BMRM).toFixed(2) + 
-      " calories for females. These caloric values do not account for daily exercise activity and may need to be adjusted as exercise is included. In a 500 calorie deficit, you would lose about one pound of fat a week. Given these adjust caloric goals, at " + 
-      (BMRF).toFixed(2) + " calories and " + (BMRM).toFixed(2) + " calories, it would take you " + calroieAdjLength + 
-      " weeks to reach your goal."
+    this.paragraph = ("The calculated BMR for an individual with the given values is approximately " + (BMRF + 500).toFixed(2) +
+      " calories for the average female and " + (BMRM + 500).toFixed(2) +
+      " calories for the average male. If you continue to eat this amount of calories a day, you can maintain this weight. Additionally, your body mass index, or BMI, is calcualted to be " + (BMI).toFixed(2))
+
+    if ((BMI) < 18.5) {
+      this.bmiSummary = (
+        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are underweight, so you may need to put on some weight. You are recommended to ask your doctor or a dietitian for advice." )
+    } else if ((BMI) > 18.5 && (BMI) < 24.9) {
+      this.bmiSummary = (
+        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems." )
+    } else if ((BMI) > 25 && (BMI) < 29.9) {
+      this.bmiSummary = (
+        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are slightly overweight. You may be advised to lose some weight for health reasons. You are recommended to talk to your doctor or a dietitian for advice." )
+    } else if ((BMI) > 30) {
+      this.bmiSummary = (
+        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " iindicates that you are heavily overweight. Your health may be at risk if you do not lose weight. You are recommended to talk to your doctor or a dietitian for advice." )
+    } else {
+      this.bmiSummary = (
+        (BMI).toFixed(2))
+    }
+
+
+
+
+    if (this.goalWeight < this.weight) {
+      this.suggest = (
+        "If you wanted to lose 1 pound a week you would need to adjust your daily caloric intake to " +
+        (BMRF).toFixed(2) + " calories for females and " + (BMRM).toFixed(2) +
+        " calories for males. These caloric values do not account for daily exercise activity and may need to be adjusted as exercise is included. In this 500 calorie deficit, it would take you " + calroieAdjLength +
+        " weeks to reach your goal."
       );
+    } else {
+      this.suggest = (
+        "If you wanted to gain 1 pound a week you would need to adjust your daily caloric intake to " +
+        (BMRF + 1000).toFixed(2) + " calories for females and " + (BMRM + 1000).toFixed(2) +
+        " calories for males. These caloric values do not account for daily exercise activity and may need to be adjusted as exercise is included. With this 500 calorie surplus, it would take you " + (-1) * calroieAdjLength +
+        " weeks to reach your goal.")
+    }
     //Reset values to 0 after form is inputted
     // this.onRunCalc.emit(newCalc)
     // this.age =0,
