@@ -1,8 +1,32 @@
-.title{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
+.title {
+  font-size: 4rem;
+  color:rgb(255, 249, 249)
 }
-header{
-    text-align: center;
-    font-size: 1.5rem;
+.subDescription {
+  padding-bottom: 2rem;
+}
+h3 {
+  max-width: 440px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top:-3rem;
+}
+p {
+  padding-top: 1rem;
+  max-width: 740px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+header {
+  border-style: solid;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+  background: rgb(46,70,111);
+  background: linear-gradient(0deg, rgba(46,70,111,1) 69%, rgba(233,229,192,1) 100%);
+  background-size: cover;
 }

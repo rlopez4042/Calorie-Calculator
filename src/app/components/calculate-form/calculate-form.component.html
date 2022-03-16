@@ -1,43 +1,48 @@
 <form class="calculate-form" (ngSubmit)="onSubmit()">
-  <div class="calculate">
-    <label for="number">Age : </label>
-    <input type="number" name="age" [(ngModel)]="age" placeholder="Age" />
-    years old.
-  </div>
-  <div class="calculate">
-    <label for="number">Weight : </label>
-    <input
-      type="number"
-      name="weight"
-      [(ngModel)]="weight"
-      placeholder=" Current Weight lbs."
-    />
-    lbs.
-  </div>
-  <div class="calculate">
-    <label for="number">Height : </label>
-    <input
-      type="number"
-      name="height"
-      [(ngModel)]="height"
-      placeholder="Height in."
-    />
-    in
-  </div>
-  <div class="calculate">
-    <label for="number">Goal Weight : </label>
-    <input
-      type="number"
-      name="goalWeight"
-      [(ngModel)]="goalWeight"
-      placeholder=" Goal Weight lbs."
-    />
-    lbs
+  <div class="inputForm">
+    <div class="calculate">
+      <label for="number">Age : </label>
+      <input type="number" name="age" [(ngModel)]="age" placeholder="Age" />
+      years old.
+    </div>
+    <div class="calculate">
+      <label for="number">Weight : </label>
+      <input
+        type="number"
+        name="weight"
+        [(ngModel)]="weight"
+        placeholder=" Current Weight lbs."
+      />
+      lbs.
+    </div>
+    <div class="calculate">
+      <label class="label" for="number">Height : </label>
+      <input
+        type="number"
+        name="height"
+        [(ngModel)]="height"
+        placeholder="Height in."
+      />
+      in
+    </div>
+    <div class="calculate">
+      <label for="number">Goal Weight : </label>
+      <input
+        type="number"
+        name="goalWeight"
+        [(ngModel)]="goalWeight"
+        placeholder=" Goal Weight lbs."
+      />
+      lbs
+    </div>
+    <input id="onlyButton" type="submit" value="Calculate" class="btn btn-block" />
     <div class="results" [hidden]="isShow" (ngSubmit)="onSubmit()">
-      <p>{{paragraph}}</p>
-      <p>{{bmiSummary}}</p>
-      <p>{{suggest}}</p>
+      <h2 id = "h2">Currently</h2>
+      <p>{{ paragraph }}</p>
+      <h2>Considerations</h2>
+      <p>{{ bmiSummary }}</p>
+      <h2>Calculations</h2>
+      <p>{{ suggest }}</p>
     </div>
   </div>
-  <input type="submit" value="Calculate" class="btn btn-block" />
 </form>

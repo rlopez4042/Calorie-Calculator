@@ -65,16 +65,16 @@ export class CalculateFormComponent implements OnInit {
 
     if ((BMI) < 18.5) {
       this.bmiSummary = (
-        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are underweight, so you may need to put on some weight. You are recommended to ask your doctor or a dietitian for advice." )
+        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are underweight, so you may need to put on some weight. It is recommended to ask your doctor or a dietitian for advice." )
     } else if ((BMI) > 18.5 && (BMI) < 24.9) {
       this.bmiSummary = (
         "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems." )
     } else if ((BMI) > 25 && (BMI) < 29.9) {
       this.bmiSummary = (
-        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are slightly overweight. You may be advised to lose some weight for health reasons. You are recommended to talk to your doctor or a dietitian for advice." )
+        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are slightly overweight. You may be advised to lose some weight for health reasons. It is recommended to talk to your doctor or a dietitian for advice." )
     } else if ((BMI) > 30) {
       this.bmiSummary = (
-        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " iindicates that you are heavily overweight. Your health may be at risk if you do not lose weight. You are recommended to talk to your doctor or a dietitian for advice." )
+        "According to Medical News Today, a BMI of " + (BMI).toFixed(2) + " indicates that you are heavily overweight. Your health may be at risk if you do not lose weight. It is recommended to talk to your doctor or a dietitian for advice." )
     } else {
       this.bmiSummary = (
         (BMI).toFixed(2))
@@ -89,6 +89,12 @@ export class CalculateFormComponent implements OnInit {
         (BMRF).toFixed(2) + " calories for females and " + (BMRM).toFixed(2) +
         " calories for males. These caloric values do not account for daily exercise activity and may need to be adjusted as exercise is included. In this 500 calorie deficit, it would take you " + calroieAdjLength +
         " weeks to reach your goal."
+      );
+    } else if (this.goalWeight = this.weight) {
+      this.suggest = (
+        "If you wanted to maintain your current weight, you can stick to " +
+        (BMRF + 500).toFixed(2)  + " calories for females and " + (BMRM + 500).toFixed(2) +
+        " calories for males. These caloric values do not account for daily exercise activity and may need to be adjusted as exercise is included."
       );
     } else {
       this.suggest = (

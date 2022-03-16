@@ -1,9 +1,44 @@
-.calculate{
-    text-align: left;
-    padding: 1rem;
+.inputForm {
+  border-style: solid;
+  background-color: rgb(39, 44, 58);
+  background-image: url("src/assets/keto_bl_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+}
+.calculate {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(46, 70, 111, 1);
+  max-width: 200px;
+}
+input {
+  margin: 0 auto;
+  display: block;
+}
+label {
+  font-size: 1.6rem;
+}
+.results {
+  text-align: left;
+  font-size: 1.6rem;
+  border-style: solid;
+  background-color: rgba(46, 70, 111, 1);
+  padding: 20px;
 }
 
-.results{
-    text-align: left;
-    font-size: 1.6rem;
+#onlyButton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: red;
+  width: 200px;
+  text-align: center;
+  color: white;
+}
+h2 {
+  color: rgb(248, 190, 0);
 }
