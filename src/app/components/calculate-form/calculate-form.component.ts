@@ -90,7 +90,7 @@ export class CalculateFormComponent implements OnInit {
         " calories for males. These caloric values do not account for daily exercise activity and may need to be adjusted as exercise is included. In this 500 calorie deficit, it would take you " + calroieAdjLength +
         " weeks to reach your goal."
       );
-    } else if (this.goalWeight = this.weight) {
+    } else if (this.goalWeight == this.weight) {
       this.suggest = (
         "If you wanted to maintain your current weight, you can stick to " +
         (BMRF + 500).toFixed(2)  + " calories for females and " + (BMRM + 500).toFixed(2) +
