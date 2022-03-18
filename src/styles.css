@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Exo&family=Fjord+One&family=Hubballi&family=Inter:wght@500&family=Noto+Serif&family=PT+Mono&family=Press+Start+2P&family=Roboto+Mono&family=Roboto:wght@100;300;400;500;700&family=Ropa+Sans&family=Shippori+Antique+B1&display=swap');
 /* Repeating background, keep behind the form */
 html {
-  background-image: url("src/assets/depositphotos_87401404-stock-illustration-vegan-protein-seamless-background.jpg");
+  background-image: url("src/assets/background2.jpg");
   background-repeat: repeat;
   font-family: "Shippori Antique B1", sans-serif;
   color:white;
